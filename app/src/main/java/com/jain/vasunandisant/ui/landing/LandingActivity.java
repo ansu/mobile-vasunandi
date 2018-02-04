@@ -21,6 +21,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.jain.vasunandisant.R;
 import com.jain.vasunandisant.data.remote.model.Category;
 import com.jain.vasunandisant.ui.base.BaseActivity;
 import com.jain.vasunandisant.ui.categoryList.master.CategoryItemListActivity;
@@ -31,7 +32,6 @@ import com.jain.vasunandisant.ui.news.NewsCardActivity;
 import com.jain.vasunandisant.ui.subCategory.master.SubCategoryListActivity;
 import com.jain.vasunandisant.ui.videoList.VideoListActivity;
 import com.jain.vasunandisant.utils.AppConstants;
-import com.jain.vasunandisant.R;
 
 import java.util.List;
 
@@ -101,6 +101,7 @@ public class LandingActivity extends BaseActivity implements LandingMvpView, Nav
         int id = item.getItemId();
 
         if (id == com.jain.vasunandisant.R.id.nav_home) {
+            openHomePage();
         } else if (id == com.jain.vasunandisant.R.id.nav_guru_sangh) {
             openSubcategoryScreen("1",getString(com.jain.vasunandisant.R.string.vidya_));
         } else if (id == com.jain.vasunandisant.R.id.nav_chalisha) {
@@ -128,6 +129,11 @@ public class LandingActivity extends BaseActivity implements LandingMvpView, Nav
         return true;
     }
 
+    private void openHomePage(){
+        Intent intent = new Intent(this, LandingActivity.class);
+        startActivity(intent);
+        finish();
+    }
 
     private void shareArti() {
         PackageManager pm=getPackageManager();
