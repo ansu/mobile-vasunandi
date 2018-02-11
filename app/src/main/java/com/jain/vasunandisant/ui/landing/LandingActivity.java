@@ -23,6 +23,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.jain.vasunandisant.R;
 import com.jain.vasunandisant.data.remote.model.Category;
+import com.jain.vasunandisant.ui.PDFList.PDFListActivity;
 import com.jain.vasunandisant.ui.base.BaseActivity;
 import com.jain.vasunandisant.ui.categoryList.master.CategoryItemListActivity;
 import com.jain.vasunandisant.ui.contactUs.ContactUsActivity;
@@ -219,6 +220,14 @@ public class LandingActivity extends BaseActivity implements LandingMvpView, Nav
     }
 
     @Override
+    public void openPDFListActivity(String id, String name){
+        Intent intent = new Intent(this, PDFListActivity.class);
+        intent.putExtra(AppConstants.CATEGORY_ID, id);
+        intent.putExtra(AppConstants.CATEGORY_NAME,name);
+        startActivity(intent);
+    }
+
+    @Override
     public void openGallery(String id, String name) {
         Intent intent = new Intent(this, GalleyActivity.class);
         intent.putExtra(AppConstants.CATEGORY_ID, id);
@@ -254,7 +263,7 @@ public class LandingActivity extends BaseActivity implements LandingMvpView, Nav
         public void onBindViewHolder(final ViewHolder holder, final int position) {
             holder.mItem = mValues.get(position);
 
-            holder.mNameView.setText(mValues.get(position).getDispalyName() + "");
+//            holder.mNameView.setText(mValues.get(position).getDispalyName() + "");
 
             if(mValues.get(position).getLogo()!=null && !mValues.get(position).getLogo().trim().isEmpty()) {
                 Glide.with(holder.mImageView.getContext())
@@ -293,13 +302,13 @@ public class LandingActivity extends BaseActivity implements LandingMvpView, Nav
             public ViewHolder(View view) {
                 super(view);
                 mView = view;
-                mNameView = (TextView) view.findViewById(com.jain.vasunandisant.R.id.category_name);
+//                mNameView = (TextView) view.findViewById(com.jain.vasunandisant.R.id.category_name);
                 mImageView = (ImageView) view.findViewById(com.jain.vasunandisant.R.id.category_image);
             }
 
             @Override
             public String toString() {
-                return super.toString() + " '" + mNameView.getText() + "'";
+                return super.toString() + " '"  + "'";
             }
         }
 

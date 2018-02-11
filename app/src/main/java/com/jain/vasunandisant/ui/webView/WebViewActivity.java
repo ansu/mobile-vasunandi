@@ -40,7 +40,8 @@ public class WebViewActivity extends BaseActivity {
         GoogleAnalyticsManager.trackGoogleAnalyticsEvent(GoogleAnalyticsManager.WEBVIEW_SCREEN_VISITED);
 
         DialogUtils.displayProgressDialog(this,getString(com.jain.vasunandisant.R.string.loading));
-        mWebView.loadDataWithBaseURL("", mWebViewContent, "text/html", "UTF-8", "");
+
+        mWebView.loadUrl(mWebViewContent);
     }
 
     @Override

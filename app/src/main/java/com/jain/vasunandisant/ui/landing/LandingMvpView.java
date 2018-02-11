@@ -24,4 +24,6 @@ public interface LandingMvpView extends MvpView {
     void openSubcategoryScreen(String s, String name);
 
     void openVideoLibrary(String id, String name);
+
+    void openPDFListActivity(String id, String name);
 }

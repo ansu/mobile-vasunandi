@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.jain.vasunandisant.com.jain.vasunandisant.ui.landing.LandingActivity">
+    tools:context="com.jain.vasunandisant.ui.landing.LandingActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -15,10 +15,12 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-	    android:background="@drawable/bg_01"
+	        android:background="@drawable/bg_01"
             app:popupTheme="@style/AppTheme.PopupOverlay"/>
 
     </android.support.design.widget.AppBarLayout>
+
+
 
     <include layout="@layout/content_landing" />
 

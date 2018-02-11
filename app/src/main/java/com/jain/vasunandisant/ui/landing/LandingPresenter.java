@@ -3,6 +3,7 @@
 package com.jain.vasunandisant.ui.landing;
 
 import com.androidnetworking.error.ANError;
+import com.jain.vasunandisant.R;
 import com.jain.vasunandisant.data.DataManager;
 import com.jain.vasunandisant.data.remote.model.Category;
 import com.jain.vasunandisant.ui.base.BasePresenter;
@@ -14,8 +15,6 @@ import javax.inject.Inject;
 import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
-import com.jain.vasunandisant.R;
-
 import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
 import io.reactivex.functions.Predicate;
@@ -157,6 +156,10 @@ public class LandingPresenter<V extends LandingMvpView> extends BasePresenter<V>
                     break;
                 case "video":
                     getMvpView().openVideoLibrary(response.getId() + "", response.getName());
+
+                    break;
+                case "pdf":
+                    getMvpView().openPDFListActivity(response.getId() + "", response.getName());
 
                     break;
                 default:

@@ -197,10 +197,12 @@
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.jain.vasunandisant.com.jain.vasunandisant.ui.categoryList.master.CategoryItemListActivity" />
+                android:value="com.jain.vasunandisant.ui.categoryList.master.CategoryItemListActivity" />
         </activity>
         <activity android:name="com.jain.vasunandisant.ui.imageFullScreenActivity.ImageFullScreenActivity" />
         <activity android:name="com.jain.vasunandisant.ui.videoList.VideoListActivity" />
+        <activity android:name="com.jain.vasunandisant.ui.PDFList.PDFListActivity" />
+
 
         <!--<receiver-->
             <!--android:name="com.google.android.gms.analytics.AnalyticsReceiver"-->

@@ -9,6 +9,6 @@
     android:layout_marginLeft="@dimen/_16sdp"
     android:layout_marginRight="@dimen/_16sdp"
     app:layoutManager="LinearLayoutManager"
-    tools:context="com.jain.vasunandisant.com.jain.vasunandisant.ui.categoryList.master.CategoryItemListActivity"
+    tools:context="com.jain.vasunandisant.ui.categoryList.master.CategoryItemListActivity"
     tools:listitem="@layout/categoryitem_list_content"
     android:background="@drawable/bg_01"/>

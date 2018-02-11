@@ -4,38 +4,40 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.jain.vasunandisant.injection.ActivityContext;
 import com.jain.vasunandisant.injection.PerActivity;
+import com.jain.vasunandisant.ui.PDFList.PDFListMVPPresenter;
+import com.jain.vasunandisant.ui.PDFList.PDFListMvpView;
+import com.jain.vasunandisant.ui.PDFList.PDFListPresnter;
 import com.jain.vasunandisant.ui.categoryList.master.CategoryItemListMvpPresenter;
+import com.jain.vasunandisant.ui.categoryList.master.CategoryItemListMvpView;
 import com.jain.vasunandisant.ui.categoryList.master.CategoryItemListPresenter;
+import com.jain.vasunandisant.ui.contactUs.ContactUsMvpPresenter;
 import com.jain.vasunandisant.ui.contactUs.ContactUsMvpView;
 import com.jain.vasunandisant.ui.contactUs.ContactUsPresenter;
 import com.jain.vasunandisant.ui.developerProfile.DeveloperMvpPresenter;
+import com.jain.vasunandisant.ui.developerProfile.DeveloperMvpView;
 import com.jain.vasunandisant.ui.developerProfile.DeveloperPresenter;
+import com.jain.vasunandisant.ui.gallery.GalleryMvpPresenter;
 import com.jain.vasunandisant.ui.gallery.GalleryMvpView;
 import com.jain.vasunandisant.ui.gallery.GalleryPresenter;
-import com.jain.vasunandisant.ui.imageFullScreenActivity.ImageFullScreenPresenter;
-import com.jain.vasunandisant.ui.landing.LandingMvpView;
-import com.jain.vasunandisant.ui.news.NewsCardPresenter;
-import com.jain.vasunandisant.ui.subCategory.master.SubCategoryListPresenter;
-import com.jain.vasunandisant.ui.videoList.VideoListMvpPresenter;
-import com.jain.vasunandisant.ui.gallery.GalleryMvpPresenter;
 import com.jain.vasunandisant.ui.imageFullScreenActivity.ImageFullScreenMvpPresenter;
+import com.jain.vasunandisant.ui.imageFullScreenActivity.ImageFullScreenMvpView;
+import com.jain.vasunandisant.ui.imageFullScreenActivity.ImageFullScreenPresenter;
 import com.jain.vasunandisant.ui.landing.LandingMvpPresenter;
+import com.jain.vasunandisant.ui.landing.LandingMvpView;
 import com.jain.vasunandisant.ui.landing.LandingPresenter;
 import com.jain.vasunandisant.ui.news.NewsCardMvpPresenter;
+import com.jain.vasunandisant.ui.news.NewsCardMvpView;
+import com.jain.vasunandisant.ui.news.NewsCardPresenter;
 import com.jain.vasunandisant.ui.subCategory.master.SubCategoryListMvpPresenter;
+import com.jain.vasunandisant.ui.subCategory.master.SubCategoryListMvpView;
+import com.jain.vasunandisant.ui.subCategory.master.SubCategoryListPresenter;
+import com.jain.vasunandisant.ui.videoList.VideoListMvpPresenter;
 import com.jain.vasunandisant.ui.videoList.VideoListMvpView;
 import com.jain.vasunandisant.ui.videoList.VideoListPresenter;
-import com.jain.vasunandisant.ui.categoryList.master.CategoryItemListMvpView;
-import com.jain.vasunandisant.ui.contactUs.ContactUsMvpPresenter;
-import com.jain.vasunandisant.ui.news.NewsCardMvpView;
-import com.jain.vasunandisant.ui.developerProfile.DeveloperMvpView;
-import com.jain.vasunandisant.ui.imageFullScreenActivity.ImageFullScreenMvpView;
 
 import dagger.Module;
 import dagger.Provides;
-
 import io.reactivex.disposables.CompositeDisposable;
-import com.jain.vasunandisant.ui.subCategory.master.SubCategoryListMvpView;
 
 /**
  * Created by @iamBedant on 15/03/17.
@@ -127,6 +129,13 @@ public class ActivityModule {
     @PerActivity
     VideoListMvpPresenter<VideoListMvpView> provideVideoListPresenter(
             VideoListPresenter<VideoListMvpView> presenter) {
+        return presenter;
+    }
+
+    @Provides
+    @PerActivity
+    PDFListMVPPresenter<PDFListMvpView> providePDFListPresenter(
+            PDFListPresnter<PDFListMvpView> presenter) {
         return presenter;
     }
 }

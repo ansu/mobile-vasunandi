@@ -3,18 +3,19 @@ package com.jain.vasunandisant.injection.component;
 
 import com.jain.vasunandisant.injection.PerActivity;
 import com.jain.vasunandisant.injection.module.ActivityModule;
+import com.jain.vasunandisant.ui.PDFList.PDFListActivity;
 import com.jain.vasunandisant.ui.categoryList.master.CategoryItemListActivity;
 import com.jain.vasunandisant.ui.contactUs.ContactUsActivity;
 import com.jain.vasunandisant.ui.developerProfile.DeveloperActivity;
 import com.jain.vasunandisant.ui.gallery.GalleyActivity;
 import com.jain.vasunandisant.ui.imageFullScreenActivity.ImageFullScreenActivity;
-import com.jain.vasunandisant.ui.news.NewsCardActivity;
-import com.jain.vasunandisant.ui.webView.WebViewActivity;
-import com.jain.vasunandisant.ui.subCategory.master.SubCategoryListActivity;
 import com.jain.vasunandisant.ui.landing.LandingActivity;
-import dagger.Component;
-
+import com.jain.vasunandisant.ui.news.NewsCardActivity;
+import com.jain.vasunandisant.ui.subCategory.master.SubCategoryListActivity;
 import com.jain.vasunandisant.ui.videoList.VideoListActivity;
+import com.jain.vasunandisant.ui.webView.WebViewActivity;
+
+import dagger.Component;
 
 
 @PerActivity
@@ -31,4 +32,6 @@ public interface ActivityComponent {
     void inject(CategoryItemListActivity categoryItemListActivity);
     void inject(ImageFullScreenActivity imageFullScreenActivity);
     void inject(VideoListActivity videoListActivity);
+    void inject(PDFListActivity pdfListActivity);
+
 }
